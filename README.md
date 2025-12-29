@@ -40,28 +40,44 @@ Evolutionary strategies that maintain and improve a population of candidate solu
 ---
 ## 📊 Performance & Benchmarking
 
-The algorithms were rigorously tested to evaluate the trade-off between **solution quality** and **computational cost**.
+The algorithms were rigorously tested against a **Random Search baseline** to measure the true impact of intelligent search strategies. The dataset includes instances of varying complexity to evaluate scalability.
 
-### 🏆 Comparative Analysis
-| Algorithm | Avg. Improvement | Avg. Execution Time | Engineering Insight |
+### 🏆 Final Results
+| Algorithm | Avg. Improvement | Avg. Execution Time | Engineering Verdict |
 | :--- | :--- | :--- | :--- |
-| **GRASP** | **+1.79%** | **0.86s** ⚡ | **Most Efficient.** Reached optimal solutions in sub-second time. |
-| **Simulated Annealing** | +1.79% | **0.67s** ⚡ | **Fastest.** Ideal for resource-constrained environments. |
-| **Genetic Algorithm** | +1.79% | 14.86s | **Robust.** Consistent convergence but high computational overhead. |
-| **Memetic Algorithm** | +1.79% | 21.80s | **Complex.** The local search overhead did not yield extra gains on this specific dataset. |
+| **Simulated Annealing** | **+17.33%** | **0.05s** 🚀 | **Best Choice.** Optimal balance: delivers top-tier quality at near-instant speed. |
+| **Genetic Algorithm** | **+17.34%** | 1.31s | **High Precision.** Reaches the global optimum consistently but is 26x slower than SA. |
+| **Memetic Algorithm** | **+17.34%** | 15.64s | **Overkill.** The local search overhead yields no extra quality gain for this problem type. |
+| **GRASP** | +7.00% | **<0.01s** ⚡ | **Fastest.** Good for ultra-low latency, but fails to escape local optima effectively. |
 
 > **🚀 Key Findings:**
-> * **Algorithmic Stability:** Remarkably, all four metaheuristics converged to the **same quality ceiling** (Max Improvement: **+6.22%** on complex instances), proving the robustness of the implemented solution space search.
-> * **Efficiency vs. Complexity:** For this specific MDP instance set, **Trajectory-based methods (GRASP/SA)** proved superior, delivering the same solution quality **~20x faster** than the Population-based evolutionary approaches.
+> * **The "Quality Ceiling":** Three algorithms (SA, GA, MA) converged to virtually the same optimal solution (**~17.3% improvement**), suggesting they successfully found the global optima for most instances.
+> * **Efficiency Surprise:** The **Simulated Annealing (SA)** algorithm emerged as the clear winner. It matched the complex Bio-inspired algorithms in quality but was **orders of magnitude faster** (0.05s vs 15s).
+> * **Complexity vs. Value:** The **Memetic Algorithm**, despite being the most complex implementation, did not provide additional value over the standard Genetic Algorithm, proving that for this specific MDP variant, heavy local search is computationally expensive without reward.
 ---
 
 ## 🛠️ Project Structure
 
+The project follows a standard modular architecture separating the domain model from the algorithmic implementations.
+
 ```text
 /src
-  ├── /algorithms
-  │     ├── /trajectory    # GRASP and Simulated Annealing implementations
-  │     └── /population    # Genetic and Memetic implementations
-  ├── /model               # Data structures (Solution, Instance)
-  ├── /utils               # File parsing and metrics
-  └── Main.java            # Experiment runner
+  └── /main
+       ├── /resources
+       │    └── /instances         # Input datasets for MDP (Mars Colonization)
+       │
+       └── /java/es/urjc/grafo/ABII
+            ├── /Model
+            │     ├── Instance.java      # Problem data parser & structure
+            │     ├── Solution.java      # Genotype representation (Boolean array)
+            │     └── Evaluator.java     # Objective function calculation
+            │
+            └── /Algorithms
+                  ├── Algorithm.java     # Interface for strategy pattern
+                  ├── /trajectory
+                  │     ├── GRASP.java
+                  │     └── SimulatedAnnealing.java
+                  ├── /population
+                  │     ├── GeneticAlgorithm.java
+                  │     └── MemeticAlgorithm.java
+                  └── Main.java          # Experiment runner & CSV exporter
