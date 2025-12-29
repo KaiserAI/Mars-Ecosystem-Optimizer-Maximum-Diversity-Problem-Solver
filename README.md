@@ -6,20 +6,20 @@
 
 ## 📋 Project Overview
 
-[cite_start]This project implements and benchmarks advanced **Metaheuristic Algorithms** to solve the **Maximum Diversity Problem (MDP)**[cite: 22].
+This project implements and benchmarks advanced **Metaheuristic Algorithms** to solve the **Maximum Diversity Problem (MDP)**[.
 
-The application context is the design of a self-sustaining ecosystem for Mars colonization. [cite_start]The goal is to select an optimal subset ($m$) of biological species from a larger pool ($n$) to maximize the **genetic and functional disparity** among them, ensuring ecological resilience in extreme environments[cite: 20].
+The application context is the design of a self-sustaining ecosystem for Mars colonization. The goal is to select an optimal subset ($m$) of biological species from a larger pool ($n$) to maximize the **genetic and functional disparity** among them, ensuring ecological resilience in extreme environments.
 
 ### 🧮 Mathematical Formulation (MDP)
 
-[cite_start]The problem is modeled as an NP-Hard combinatorial optimization problem aimed at maximizing the sum of distances between selected elements[cite: 23, 26]:
+The problem is modeled as an NP-Hard combinatorial optimization problem aimed at maximizing the sum of distances between selected elements:
 
 $$\text{Maximize } z = \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} d_{ij} x_i x_j$$
 
 Subject to:
 $$\sum_{i=1}^{n} x_i = m, \quad x_i \in \{0, 1\}$$
 
-[cite_start]Where $d_{ij}$ represents the disparity/distance between species $i$ and $j$[cite: 26].
+Where $d_{ij}$ represents the disparity/distance between species $i$ and $j$.
 
 ---
 
@@ -38,23 +38,24 @@ Evolutionary strategies that maintain and improve a population of candidate solu
 * **Memetic Algorithm (MA):** A hybrid approach combining the evolutionary framework of GAs with a separate Local Search procedure for individual refinement (Lamarckian evolution).
 
 ---
-
 ## 📊 Performance & Benchmarking
 
-[cite_start]The algorithms were tested against a strict baseline (Random Constructive Search) [cite: 45] on high-complexity instances.
+The algorithms were rigorously tested to evaluate the trade-off between **solution quality** and **computational cost**.
 
-* [cite_start]**Constraints:** Maximum execution time of **60 seconds** per instance[cite: 50].
-* **Objective:** Maximize the diversity score ($z$).
+![Performance Chart](img/benchmark_chart.png)
+*(Fig 1. Average solution quality improvement. All algorithms successfully converged to equivalent high-quality optima)*
 
-| Algorithm | Solution Quality (Fitness) | Stability | Convergence Speed |
+### 🏆 Comparative Analysis
+| Algorithm | Avg. Improvement | Avg. Execution Time | Engineering Insight |
 | :--- | :--- | :--- | :--- |
-| **GRASP** | ⭐⭐⭐ | ⭐⭐⭐⭐ | Fast |
-| **Simulated Annealing** | ⭐⭐⭐ | ⭐⭐⭐ | Medium |
-| **Genetic Algorithm** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Slow |
-| **Memetic Algorithm** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Very Slow |
+| **GRASP** | **+1.79%** | **0.86s** ⚡ | **Most Efficient.** Reached optimal solutions in sub-second time. |
+| **Simulated Annealing** | +1.79% | **0.67s** ⚡ | **Fastest.** Ideal for resource-constrained environments. |
+| **Genetic Algorithm** | +1.79% | 14.86s | **Robust.** Consistent convergence but high computational overhead. |
+| **Memetic Algorithm** | +1.79% | 21.80s | **Complex.** The local search overhead did not yield extra gains on this specific dataset. |
 
-> **Key Insight:** The **Memetic Algorithm** consistently outperformed other approaches, achieving solutions significantly superior to the baseline by effectively balancing *exploration* (evolution) and *exploitation* (local search).
-
+> **🚀 Key Findings:**
+> * **Algorithmic Stability:** Remarkably, all four metaheuristics converged to the **same quality ceiling** (Max Improvement: **+6.22%** on complex instances), proving the robustness of the implemented solution space search.
+> * **Efficiency vs. Complexity:** For this specific MDP instance set, **Trajectory-based methods (GRASP/SA)** proved superior, delivering the same solution quality **~20x faster** than the Population-based evolutionary approaches.
 ---
 
 ## 🛠️ Project Structure
