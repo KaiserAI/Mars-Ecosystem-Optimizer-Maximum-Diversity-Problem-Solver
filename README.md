@@ -42,9 +42,6 @@ Evolutionary strategies that maintain and improve a population of candidate solu
 
 The algorithms were rigorously tested to evaluate the trade-off between **solution quality** and **computational cost**.
 
-![Performance Chart](img/benchmark_chart.png)
-*(Fig 1. Average solution quality improvement. All algorithms successfully converged to equivalent high-quality optima)*
-
 ### 🏆 Comparative Analysis
 | Algorithm | Avg. Improvement | Avg. Execution Time | Engineering Insight |
 | :--- | :--- | :--- | :--- |
