@@ -1,0 +1,76 @@
+Instancia,Algoritmo,Score,Tiempo(s)
+instancia_06_n30_m24.txt,Random Search,33270.33,0.0000
+instancia_06_n30_m24.txt,GRASP,33904.43,0.0030
+instancia_06_n30_m24.txt,Simulated Annealing,34073.31,0.0310
+instancia_06_n30_m24.txt,Genetic Algorithm,34073.31,0.3250
+instancia_06_n30_m24.txt,Memetic Algorithm,34073.31,0.2480
+instancia_08_n100_m10.txt,Random Search,4053.63,0.0000
+instancia_08_n100_m10.txt,GRASP,4391.03,0.0000
+instancia_08_n100_m10.txt,Simulated Annealing,5402.31,0.0350
+instancia_08_n100_m10.txt,Genetic Algorithm,5402.31,0.3270
+instancia_08_n100_m10.txt,Memetic Algorithm,5402.31,1.7310
+instancia_10_n150_m15.txt,Random Search,19146.26,0.0000
+instancia_10_n150_m15.txt,GRASP,20532.71,0.0000
+instancia_10_n150_m15.txt,Simulated Annealing,22674.92,0.0740
+instancia_10_n150_m15.txt,Genetic Algorithm,22674.92,0.7580
+instancia_10_n150_m15.txt,Memetic Algorithm,22674.92,8.4610
+instancia_13_n150_m45.txt,Random Search,127735.02,0.0000
+instancia_13_n150_m45.txt,GRASP,136802.20,0.0000
+instancia_13_n150_m45.txt,Simulated Annealing,145685.39,0.0710
+instancia_13_n150_m45.txt,Genetic Algorithm,145685.39,1.8020
+instancia_13_n150_m45.txt,Memetic Algorithm,145685.39,40.0150
+instancia_09_n125_m37.txt,Random Search,100945.72,0.0000
+instancia_09_n125_m37.txt,GRASP,104047.47,0.0000
+instancia_09_n125_m37.txt,Simulated Annealing,111485.58,0.0490
+instancia_09_n125_m37.txt,Genetic Algorithm,111485.58,1.2520
+instancia_09_n125_m37.txt,Memetic Algorithm,111485.58,22.3230
+instancia_15_n500_m50.txt,Random Search,16035.27,0.0000
+instancia_15_n500_m50.txt,GRASP,17456.25,0.0020
+instancia_15_n500_m50.txt,Simulated Annealing,19694.79,0.1600
+instancia_15_n500_m50.txt,Genetic Algorithm,19701.53,5.3720
+instancia_15_n500_m50.txt,Memetic Algorithm,19701.53,40.2820
+instancia_12_n150_m45.txt,Random Search,177856.94,0.0000
+instancia_12_n150_m45.txt,GRASP,184903.87,0.0000
+instancia_12_n150_m45.txt,Simulated Annealing,199702.55,0.0550
+instancia_12_n150_m45.txt,Genetic Algorithm,199702.55,1.6640
+instancia_12_n150_m45.txt,Memetic Algorithm,199702.55,40.0060
+instancia_05_n30_m6.txt,Random Search,1387.26,0.0000
+instancia_05_n30_m6.txt,GRASP,1571.48,0.0000
+instancia_05_n30_m6.txt,Simulated Annealing,1912.60,0.0070
+instancia_05_n30_m6.txt,Genetic Algorithm,1912.60,0.0810
+instancia_05_n30_m6.txt,Memetic Algorithm,1912.60,0.0840
+instancia_07_n50_m15.txt,Random Search,8802.70,0.0000
+instancia_07_n50_m15.txt,GRASP,9560.70,0.0000
+instancia_07_n50_m15.txt,Simulated Annealing,10852.35,0.0160
+instancia_07_n50_m15.txt,Genetic Algorithm,10852.35,0.2540
+instancia_07_n50_m15.txt,Memetic Algorithm,10852.35,1.0920
+instancia_04_n15_m9.txt,Random Search,5068.07,0.0000
+instancia_04_n15_m9.txt,GRASP,5323.47,0.0000
+instancia_04_n15_m9.txt,Simulated Annealing,5574.20,0.0050
+instancia_04_n15_m9.txt,Genetic Algorithm,5574.20,0.0630
+instancia_04_n15_m9.txt,Memetic Algorithm,5574.20,0.0290
+instancia_14_n500_m50.txt,Random Search,15899.69,0.0000
+instancia_14_n500_m50.txt,GRASP,16984.66,0.0020
+instancia_14_n500_m50.txt,Simulated Annealing,19479.09,0.1750
+instancia_14_n500_m50.txt,Genetic Algorithm,19485.19,5.8430
+instancia_14_n500_m50.txt,Memetic Algorithm,19485.19,40.2680
+instancia_02_n10_m8.txt,Random Search,2458.36,0.0000
+instancia_02_n10_m8.txt,GRASP,2720.61,0.0000
+instancia_02_n10_m8.txt,Simulated Annealing,2720.61,0.0090
+instancia_02_n10_m8.txt,Genetic Algorithm,2720.61,0.0400
+instancia_02_n10_m8.txt,Memetic Algorithm,2720.61,0.0070
+instancia_01_n10_m6.txt,Random Search,1858.74,0.0000
+instancia_01_n10_m6.txt,GRASP,2082.44,0.0000
+instancia_01_n10_m6.txt,Simulated Annealing,2106.74,0.0030
+instancia_01_n10_m6.txt,Genetic Algorithm,2106.74,0.0350
+instancia_01_n10_m6.txt,Memetic Algorithm,2106.74,0.0080
+instancia_03_n15_m3.txt,Random Search,608.51,0.0000
+instancia_03_n15_m3.txt,GRASP,601.42,0.0000
+instancia_03_n15_m3.txt,Simulated Annealing,670.80,0.0030
+instancia_03_n15_m3.txt,Genetic Algorithm,670.80,0.0340
+instancia_03_n15_m3.txt,Memetic Algorithm,670.80,0.0100
+instancia_11_n150_m45.txt,Random Search,114918.28,0.0000
+instancia_11_n150_m45.txt,GRASP,125517.48,0.0000
+instancia_11_n150_m45.txt,Simulated Annealing,136020.51,0.0590
+instancia_11_n150_m45.txt,Genetic Algorithm,136032.02,1.8070
+instancia_11_n150_m45.txt,Memetic Algorithm,136032.02,40.0100
